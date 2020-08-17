@@ -13,6 +13,7 @@ import axios from 'axios';
 import Filters from './filters';
 import { API } from './config';
 import services from './services';
+import './registerServiceWorker'
 
 Vue.use( CKEditor );
 Vue.use( Filters );

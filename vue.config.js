@@ -8,8 +8,8 @@ module.exports = {
     // outputDir: path.resolve(__dirname, `./${theme}-${version}`),
     pwa: {
         iconPaths: {
-            favicon16: `public/icons/favicon-16x16.png`,
-            favicon32: `public/icons/favicon-32x32.png`,
+            favicon16: `img/icons/favicon-16x16.png`,
+            favicon32: `img/icons/favicon-32x32.png`,
         },
     },
     css: {
