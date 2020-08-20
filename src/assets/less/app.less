@@ -11,7 +11,7 @@
 }
 
 body {
-  //font-weight: 500 !important;
+  font-weight: 500 !important;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,6 +21,9 @@ body {
 a {
   text-decoration: none;
   color: @normal-color;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 ul {
@@ -37,9 +40,14 @@ h1 {
 }
 
 p {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .pointer {
   cursor: pointer;
+}
+
+.ivu-menu-item-active {
+  background: #2d8cf0 !important;
+  color: #ffffff !important;
 }

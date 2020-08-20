@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from '@/components/Home';
-import HomePage from '@/components/HomePage';
-import CourseDetail from '@/components/Course/CourseDetail.vue';
 import Login from '@/pages/Login';
-import CourseManager from '@/pages/CourseManager';
 import Register from '@/pages/Register.vue';
-import HomeAdmin from '@/pages/admin/HomeAdmin.vue';
+import Posts from '@/pages/Posts.vue';
+import PostDetail from '@/pages/PostDetail.vue';
+import Department from '@/pages/Department.vue';
+import DepartmentDetail from '@/pages/DepartmentDetail.vue';
+import Home from '@/pages/Home.vue';
 import CourseManagement from '@/pages/admin/CourseManagement.vue';
 import UsersManagement from '@/pages/admin/UsersManagement.vue';
 
@@ -19,39 +19,42 @@ export default new Router({
             path: '/',
             name: 'Home',
             component: Home,
+            // redirect: '/course-management',
             children: [
                 {
                     path: '/',
-                    name: 'HomePage',
-                    component: HomePage,
-                },
-                {
-                    path: '/course-manager',
-                    name: 'CourseManager',
-                    component: CourseManager,
-                },
-                {
-                    path: '/course-manager/:id',
-                    name: 'CourseDetail',
-                    component: CourseDetail,
-                },
-            ]
-        },
-        {
-            path: '/home-admin',
-            name: 'HomeAdmin',
-            component: HomeAdmin,
-            redirect: '/home-admin/course-management',
-            children: [
-                {
-                    path: '/home-admin/course-management',
                     name: 'CourseManagement',
                     component: CourseManagement,
                 },
                 {
-                    path: '/home-admin/users-management',
+                    path: '/course-management',
+                    name: 'CourseManagement',
+                    component: CourseManagement,
+                },
+                {
+                    path: '/users-management',
                     name: 'UsersManagement',
                     component: UsersManagement,
+                },
+                {
+                    path: '/posts',
+                    name: 'Posts',
+                    component: Posts,
+                },
+                {
+                    path: '/posts/:id',
+                    name: 'PostDetail',
+                    component: PostDetail,
+                },
+                {
+                    path: '/department',
+                    name: 'department',
+                    component: Department,
+                },
+                {
+                    path: '/department/:id',
+                    name: 'department-detail',
+                    component: DepartmentDetail,
                 },
             ],
         },
