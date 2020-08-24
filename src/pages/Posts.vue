@@ -3,7 +3,11 @@
         <Row :gutter="20">
             <i-col v-for="(item, index) in 10"
                    :key="index"
-                   span="8">
+                   :xs="24"
+                   :sm="24"
+                   :md="12"
+                   :xl="8"
+                   :xxl="6">
                 <PostCard/>
             </i-col>
         </Row>

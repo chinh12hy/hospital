@@ -51,8 +51,6 @@
                 }, error => {
                     console.log(error);
                 })
-                console.log('formData: ', this.fileStore);
-
                 this.showMessage = true
             },
 
@@ -64,7 +62,6 @@
                     return 0
                 }
                 const formData = new FormData();
-                console.log('fileStore: ', fileStore);
                 Object.keys(fileStore).forEach(key => formData.append('files', fileStore[key]))
 
                 this.showMessage = true

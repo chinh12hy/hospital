@@ -1,0 +1,38 @@
+@active-menu-item-bg: #2f54eb;
+.menu-mobile {
+  background: @menu-bg;
+  padding-top: 30px;
+  text-align: center;
+  .menu-mobile-item {
+    color: #ffffff;
+    padding: 10px 20px;
+    display: block;
+    &.active {
+      background: @active-menu-item-bg;
+    }
+  }
+}
+@media ( max-width: 768px) {
+  .menu-mobile {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: @header-height;
+    z-index: 999;
+    opacity: 0;
+    transition: .3s;
+    visibility: hidden;
+    &.show-menu {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@media ( min-width: 769px) {
+  .menu-mobile {
+    display: none;
+  }
+}

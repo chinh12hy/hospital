@@ -1,8 +1,12 @@
 <template>
-    <div class="p-md-3">
+    <div class="p-3">
         <DepartmentHeader/>
-        <Row>
-            <i-col span="6">
+        <Row :gutter="20">
+            <i-col :xs="24"
+                   :sm="24"
+                   :md="12"
+                   :xl="8"
+                   :xxl="6">
                 <Card class="card-user"
                       :padding="0">
                     <div class="card-avatar">

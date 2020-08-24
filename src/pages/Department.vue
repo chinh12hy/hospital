@@ -1,23 +1,24 @@
 <template>
-    <div class="p-md-3">
+    <div class="p-3">
         <DepartmentHeader @on-open-create-modal="handleOpenModal"/>
-        <div class="grid-container">
-            <div v-for="(item, index) in departments"
-                 :key="index">
-                <DepartmentItem :inputData="item"/>
-            </div>
-        </div>
+        <Row :gutter="20">
+            <i-col v-for="(item, index) in departments"
+                   :key="index"
+                   :sm="24"
+                   :md="12"
+                   :xl="8"
+                   :xxl="6">
+                <div style="margin-bottom: 15px">
+                    <DepartmentItem :inputData="item"/>
+                </div>
+            </i-col>
+        </Row>
         <CreateDepartmentModal ref="modal"
                                @on-create="handleCreateDepartment"/>
     </div>
 </template>
 
 <style lang="less">
-    .grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        grid-gap: 20px;
-    }
     .department-item {
         padding: 7px 10px;
         border: 1px solid #2c3e50;

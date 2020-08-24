@@ -2,9 +2,10 @@
     <Modal v-model="isOpen"
            footer-hide
            :title="title">
-        <p> {{ text}} ?</p>
+        <p class="my-2"> {{ text}} ?</p>
         <div class="flex-row-right">
-            <Button @click="close" class="mr-sm-2"> Hủy </Button>
+            <Button @click="close"
+                    class="mr-2"> Hủy </Button>
             <Button type="primary"
                     @click="handleYes">
                 Xác nhận

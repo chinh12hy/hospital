@@ -10,11 +10,25 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.min'
 import CKEditor from '@ckeditor/ckeditor5-vue';
 import axios from 'axios';
+import _ from 'lodash';
+import ECharts from 'vue-echarts';
 import Filters from './filters';
 import { API } from './config';
 import services from './services';
 import './registerServiceWorker';
 import GoogleAuth from '@/config/google.js';
+
+import 'echarts/lib/component/toolbox';
+import 'echarts/lib/component/markLine';
+import 'echarts/lib/component/markPoint';
+import 'echarts/lib/component/legend';
+import 'echarts/lib/component/dataZoom';
+import 'echarts/lib/chart/bar';
+import 'echarts/lib/chart/line';
+import 'echarts/lib/chart/lines';
+import 'echarts/lib/chart/pie';
+import 'echarts/lib/component/tooltip';
+import 'echarts/lib/component/legend/ScrollableLegendView';
 
 const gauthOption = {
     clientId: '244376640722-ugp7doftu62fb13v9mv6ddbul8s1sju8.apps.googleusercontent.com',
@@ -38,6 +52,8 @@ const instance = axios.create({
 Vue.prototype.$api = API;
 Vue.prototype.$axios = instance;
 Vue.prototype.$services = services;
+Vue.prototype.$lodash = _;
+Vue.component('chart', ECharts);
 Vue.http.interceptors.push((request, next) => {
     console.log(request)
     const TOKEN = localStorage.getItem('token');

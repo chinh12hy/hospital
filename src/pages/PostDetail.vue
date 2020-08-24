@@ -1,5 +1,5 @@
 <template>
-    <div class="p-lg-3">
+    <div class="p-3">
         <Row :gutter="20">
             <i-col span="16">
                 <div class="post-content">
@@ -20,7 +20,7 @@
                         <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
                              alt="">
                     </div>
-                    <div class="mt-md-3 text-secondary">
+                    <div class="mt-3 text-secondary">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit officia neque beatae at inventore excepturi numquam sint commodi alias, quam consequuntur corporis ex, distinctio eaque sapiente pariatur iure ad necessitatibus in quod obcaecati natus consequatur. Sed dicta maiores, eos culpa.
 

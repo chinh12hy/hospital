@@ -7,8 +7,9 @@ import PostDetail from '@/pages/PostDetail.vue';
 import Department from '@/pages/Department.vue';
 import DepartmentDetail from '@/pages/DepartmentDetail.vue';
 import Home from '@/pages/Home.vue';
-import CourseManagement from '@/pages/admin/CourseManagement.vue';
-import UsersManagement from '@/pages/admin/UsersManagement.vue';
+import Dashboard from '@/pages/Dashboard.vue';
+import UsersManagement from '@/pages/UsersManagement.vue';
+import PendingUsers from '@/pages/PendingUsers.vue';
 
 Vue.use(Router);
 
@@ -19,22 +20,22 @@ export default new Router({
             path: '/',
             name: 'Home',
             component: Home,
-            // redirect: '/course-management',
+            redirect: '/dashboard',
             children: [
                 {
-                    path: '/',
-                    name: 'CourseManagement',
-                    component: CourseManagement,
-                },
-                {
-                    path: '/course-management',
-                    name: 'CourseManagement',
-                    component: CourseManagement,
+                    path: '/dashboard',
+                    name: 'dashboard',
+                    component: Dashboard,
                 },
                 {
                     path: '/users-management',
                     name: 'UsersManagement',
                     component: UsersManagement,
+                },
+                {
+                    path: '/pending-users',
+                    name: 'pendingUsers',
+                    component: PendingUsers,
                 },
                 {
                     path: '/posts',

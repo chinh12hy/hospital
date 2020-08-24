@@ -1,5 +1,5 @@
 <template>
-    <div class="p-md-3">
+    <div class="p-3">
         <div class="grid-container">
             <div v-for="(item, index) in 10"
                  :key="index"
